@@ -47,3 +47,7 @@ jobs:
       # See https://cmake.org/cmake/help/latest/manual/ctest.1.html for more detail
       run: ctest -C ${{env.BUILD_TYPE}}
 
+    - uses: actions/upload-artifact@v2
+      with:
+        name: libfreenect2
+        path: ${{github.workspace}}
